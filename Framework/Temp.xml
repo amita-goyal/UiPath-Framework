@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Test-Suite>
+  <Result>
+    <TestScenario>Ebay Test - Fail</TestScenario>
+    <TestName>Fail Test</TestName>
+    <Started>07/28/2020 18:11:18</Started>
+    <Status>STARTED</Status>
+  </Result>
+</Test-Suite>

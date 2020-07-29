@@ -1,0 +1,93 @@
+{
+  "name": "AutomationRobo",
+  "description": "Dynamic Web Form Automation RPA Challenge",
+  "main": "TestCase\\Main.xaml",
+  "dependencies": {
+    "NUnit": "[3.12.0]",
+    "RBanda.TestReportGenerator.Activities": "[1.4.1]",
+    "ReporterForUiPath.Activities": "[1.0.10]",
+    "UiPath.Excel.Activities": "[2.9.0-preview]",
+    "UiPath.Jira.Activities": "[0.1.0-preview]",
+    "UiPath.JiraSoftware.Activities": "[1.0.3.22730]",
+    "UiPath.Mail.Activities": "[1.9.0-preview]",
+    "UiPath.MobileAutomation.Activities": "[20.6.0-preview]",
+    "UiPath.System.Activities": "[20.6.1-preview]",
+    "UiPath.Testing.Activities": "[1.0.0]",
+    "UiPath.UIAutomation.Activities": "[20.6.0-preview]",
+    "UiPath.WebAPI.Activities": "[1.4.5]",
+    "UiPathTeam.Confluence.Activities": "[1.0.0.69]",
+    "UiPathTeam.DatatableConverter.Activities": "[1.0.1]",
+    "UiPathTeam.JiraGet.Activities": "[1.0.0.116]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "20.6.0.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "isPausable": true,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "fileInfoCollection": [
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "44f822dd-00a7-4604-aaa6-fa230989b869",
+        "fileName": "TestCase\\RPA_ChallengeTest-Pass.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "5e6b454a-90e3-4df0-a66b-fea0c22374c2",
+        "fileName": "TestCase\\RPA_ChallengeTest - Fail.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "fad659bf-9fda-4e43-be8f-fbf25624f7f6",
+        "fileName": "TestCase\\apiTest - Fail.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "5d1dbe80-f21f-46a1-8324-79d041532945",
+        "fileName": "TestCase\\apiTest - Pass.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "56ab3236-47f4-4e64-b177-1869fb5e0f8b",
+        "fileName": "TestCase\\ebayTest - Fail.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "4f8ae64e-083c-4d99-ab96-e36c1fe8a534",
+        "fileName": "TestCase\\ebayTest - Pass.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "7ee15a03-3b7e-49f4-99a7-b0f6338736c7",
+        "fileName": "TestCase\\ebayTest(Cloud) - Fail.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "51818a36-7d37-4174-9cf5-f15a9b7a750e",
+        "fileName": "TestCase\\ebayTest(Cloud) - Pass.xaml"
+      }
+    ]
+  },
+  "arguments": {
+    "input": [],
+    "output": []
+  },
+  "expressionLanguage": "VisualBasic"
+}

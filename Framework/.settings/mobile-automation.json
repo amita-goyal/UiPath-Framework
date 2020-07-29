@@ -1,0 +1,33 @@
+{
+  "GenerateCrossPlatformAttributes": false,
+  "GenerateSelectorsForInnerElements": true,
+  "Connections": [
+    {
+      "Name": " Samsung Galaxy S10e",
+      "Description": null,
+      "Url": "https://nitinkumarverma1:vxD9NVoFeeSXUfsfCTb4@hub-cloud.browserstack.com/wd/hub",
+      "PlatformName": "Android",
+      "PlatformVersion": "9.0",
+      "DeviceName": " Samsung Galaxy S10e",
+      "Capabilities": {}
+    }
+  ],
+  "Applications": [
+    {
+      "Name": "ebay",
+      "Description": null,
+      "Type": "App",
+      "Platforms": {
+        "Android": {
+          "Capabilities": {
+            "app": "bs://a06490377b554fa9d5d81ac2dafb902a605fea5d"
+          },
+          "StartPage": null
+        }
+      }
+    }
+  ],
+  "NormalizeSliderValue": false,
+  "IdsMaxAllowedLength": 40,
+  "Variables": {}
+}
