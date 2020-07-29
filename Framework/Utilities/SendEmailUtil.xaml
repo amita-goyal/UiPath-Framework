@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>895.2,820</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>588,814</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SendEmailUtil_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
@@ -63,7 +63,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SendEmailUtil" sap:VirtualizedContainerService.HintSize="425.6,655.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SendEmailUtil" sap:VirtualizedContainerService.HintSize="426,649" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="reportContent" />
       <Variable x:TypeArguments="x:String" Name="Content" />
@@ -76,21 +76,21 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadRange AddHeaders="True" DataTable="[DataTable]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="384,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="EmailCred" WorkbookPath="Config\Config.xlsx">
+    <ui:ReadRange AddHeaders="True" DataTable="[DataTable]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="384,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="EmailCred" WorkbookPath="Config\Config.xlsx">
       <ui:ReadRange.Range>
         <InArgument x:TypeArguments="x:String">
           <Literal x:TypeArguments="x:String" Value="" />
         </InArgument>
       </ui:ReadRange.Range>
     </ui:ReadRange>
-    <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Username" DisplayName="Get Row Item: Username" sap:VirtualizedContainerService.HintSize="384,64.8" sap2010:WorkflowViewState.IdRef="GetRowItem_1" Row="[DataTable.Rows(0)]">
+    <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Username" DisplayName="Get Row Item: Username" sap:VirtualizedContainerService.HintSize="384,64" sap2010:WorkflowViewState.IdRef="GetRowItem_1" Row="[DataTable.Rows(0)]">
       <ui:GetRowItem.Value>
         <OutArgument x:TypeArguments="x:String">[username]</OutArgument>
       </ui:GetRowItem.Value>
     </ui:GetRowItem>
-    <ui:ReadTextFile Content="[reportContent]" DisplayName="Read Text File" FileName="Testing-Report.html" sap:VirtualizedContainerService.HintSize="384,80.8" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
-    <ui:GetPassword DisplayName="Get Password" sap:VirtualizedContainerService.HintSize="384,22.4" sap2010:WorkflowViewState.IdRef="GetPassword_1" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAaDr3Ua7g2U+tbR23b/oVCgAAAAACAAAAAAADZgAAwAAAABAAAACTtNfKHE3O8g2UXu5M2XEHAAAAAASAAACgAAAAEAAAAO4bsrWwUjnN3KyPLovEwPIQAAAAgc9Ah5bdKKZ1A2t6/eUMWBQAAACIxnzHJaUfXsCfjWtYeb18i8JoLg==" Result="[password]" />
-    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" Body="[&quot;Hi All,&lt;br&gt;Please find the attached Execution Report.&lt;br&gt;&quot;+reportContent+&quot;&lt;br&gt;Thanks &amp; Regards&lt;br&gt;Testing Xperts&quot;]" DisplayName="Send SMTP Mail Message" Email="[username]" EnableSSL="True" From="[username]" sap:VirtualizedContainerService.HintSize="384,146.4" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="True" Name="TX" Password="[password]" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="[Subject]" TimeoutMS="5000" To="damcotestuser@gmail.com">
+    <ui:ReadTextFile Content="[reportContent]" DisplayName="Read Text File" FileName="Testing-Report.html" sap:VirtualizedContainerService.HintSize="384,79" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+    <ui:GetPassword DisplayName="Get Password" sap:VirtualizedContainerService.HintSize="384,22" sap2010:WorkflowViewState.IdRef="GetPassword_1" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAALl1Nwun/YU+Gx8nrcHOHMQAAAAACAAAAAAAQZgAAAAEAACAAAACT+jMoYLHSCoZcoUwfr5ln0sZHpfFrPBiunojZ/CjDrAAAAAAOgAAAAAIAACAAAAB1jg3r+ZnjjjcdTB8PhdymJsRobqM9bXoHAPdopEt1aRAAAACpwwQY661UXJ+yOcemRb1AQAAAAHBeJqyT7R+PCRx6BpTFMcfmHnCOFU4t8JdYbA0zAIP6yN8/LB0WSlRz4C2CqezMJ7lPe3JLCQoUTycAmIbBGfs=" Result="[password]" />
+    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" Body="[&quot;Hi All,&lt;br&gt;Please find the attached Execution Report.&lt;br&gt;&quot;+reportContent+&quot;&lt;br&gt;Thanks &amp; Regards&lt;br&gt;Testing Xperts&quot;]" DisplayName="Send SMTP Mail Message" Email="[username]" EnableSSL="True" From="[username]" sap:VirtualizedContainerService.HintSize="384,145" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="True" Name="TX" Password="[password]" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="[Subject]" TimeoutMS="5000" To="damcotestuser@gmail.com">
       <ui:SendMail.Files>
         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
       </ui:SendMail.Files>
