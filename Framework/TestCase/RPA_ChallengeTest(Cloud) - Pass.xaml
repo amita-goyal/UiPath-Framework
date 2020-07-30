@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" this:Sequence.First_Name="John" this:Sequence.Last_Name="Smith" this:Sequence.Company_Name="IT Solutions" this:Sequence.Role_in_Company="Analyst" this:Sequence.Address="98 North Road" this:Sequence.Email="jsmith@itsolutions.co.uk" this:Sequence.Phone_Number="40716543298" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:t="clr-namespace:TestReportGenerator;assembly=TestReportGenerator" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="RPA_ChallengeTest" this:RPA_ChallengeTest.First_Name="John" this:RPA_ChallengeTest.Last_Name="Smith" this:RPA_ChallengeTest.Company_Name="IT Solutions" this:RPA_ChallengeTest.Role_in_Company="Analyst" this:RPA_ChallengeTest.Address="98 North Road" this:RPA_ChallengeTest.Email="jsmith@itsolutions.co.uk" this:RPA_ChallengeTest.Phone_Number="40716543298" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:t="clr-namespace:TestReportGenerator;assembly=TestReportGenerator" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="First_Name" Type="InArgument(x:String)" />
     <x:Property Name="Last_Name" Type="InArgument(x:String)" />
@@ -11,7 +11,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>848.8,624</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1085.6,8235.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Sequence_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="25">
@@ -79,7 +79,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="RPAChallangeTest" sap:VirtualizedContainerService.HintSize="241.6,472" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="RPA_ChallengeTest(Cloud) - Pass" sap:VirtualizedContainerService.HintSize="1096,8070.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="in_Folder" />
     </Sequence.Variables>
@@ -89,15 +89,15 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <t:StartTest DisplayName="Start test" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="StartTest_1" ScenarioName="RPA Challenge Test - Pass" Status="STARTED" TestCase="Pass Test" />
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Utilities/ReportUtil.xaml">
+    <t:StartTest DisplayName="Start test" sap:VirtualizedContainerService.HintSize="1054.4,22.4" sap2010:WorkflowViewState.IdRef="StartTest_1" ScenarioName="RPA Challenge Test - Pass" Status="STARTED" TestCase="Pass Test" />
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="1054.4,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Utilities/ReportUtil.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="Report_Name">Web Test Report</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="Suite_Name">WEB TEST</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="Test_Name">RPA Challenge Test - Pass</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <Sequence sap:VirtualizedContainerService.HintSize="241.6,145.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
+    <Sequence sap:VirtualizedContainerService.HintSize="1054.4,7596.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="io_FilePath" />
       </Sequence.Variables>
@@ -107,7 +107,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1012.8,7661.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1011.2,7504" sap2010:WorkflowViewState.IdRef="TryCatch_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -115,7 +115,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <TryCatch.Try>
-          <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="976,5064.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="974.4,4907.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="dataTable" />
             </Sequence.Variables>
@@ -125,29 +125,33 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="934.4,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Utilities/InitAllApplications.xaml">
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="932.8,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Utilities/InitAllApplications.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <scg:Dictionary x:TypeArguments="x:String, Argument" />
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-            <ui:ReadRange AddHeaders="True" DataTable="[dataTable]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="934.4,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="Test Data\challenge.xlsx">
+            <ui:ReadRange AddHeaders="True" DataTable="[dataTable]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="932.8,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="Test Data\challenge.xlsx">
               <ui:ReadRange.Range>
                 <InArgument x:TypeArguments="x:String">
                   <Literal x:TypeArguments="x:String" Value="" />
                 </InArgument>
               </ui:ReadRange.Range>
             </ui:ReadRange>
-            <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe Rpa'" sap:VirtualizedContainerService.HintSize="934.4,4716" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="567eb9644efff86ef842060cbba6248a" Selector="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;">
+            <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe Rpa'" sap:VirtualizedContainerService.HintSize="932.8,4558.4" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="567eb9644efff86ef842060cbba6248a" Selector="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;">
               <ui:BrowserScope.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                   </ActivityAction.Argument>
-                  <Sequence sap:VirtualizedContainerService.HintSize="900.8,4568.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence sap:VirtualizedContainerService.HintSize="899.2,4411.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <Sequence.Variables>
-                      <Variable x:TypeArguments="x:String" Default="Congratulations!" Name="lableSuccess" />
+                      <Variable x:TypeArguments="x:String" Default="Congratulations!" Name="expectedValue" />
                       <Variable x:TypeArguments="x:String" Name="actualValue" />
-                      <Variable x:TypeArguments="x:Boolean" Default="[actualValue= lableSuccess]" Name="lbl_Compare" />
+                      <Variable x:TypeArguments="x:Boolean" Name="lbl_Compare">
+                        <Variable.Default>
+                          <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="actualValue= expectedValue" />
+                        </Variable.Default>
+                      </Variable>
                     </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -155,20 +159,20 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dataTable]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="859.2,4104.8" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dataTable]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="857.6,3316.8" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                       <ui:ForEachRow.Body>
                         <ActivityAction x:TypeArguments="sd:DataRow">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="809.6,3956" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="808,3168" sap2010:WorkflowViewState.IdRef="Sequence_4">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="768,3863.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="766.4,3075.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="x:String" Name="varFirstName" />
                                 <Variable x:TypeArguments="x:String" Name="varLastName" />
@@ -184,42 +188,42 @@
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="First Name" DisplayName="Get Row Item For First Name" sap:VirtualizedContainerService.HintSize="726.4,64.8" sap2010:WorkflowViewState.IdRef="GetRowItem_1" Row="[row]">
+                              <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="First Name" DisplayName="Get Row Item For First Name" sap:VirtualizedContainerService.HintSize="724.8,64.8" sap2010:WorkflowViewState.IdRef="GetRowItem_1" Row="[row]">
                                 <ui:GetRowItem.Value>
                                   <OutArgument x:TypeArguments="x:String">[varFirstName]</OutArgument>
                                 </ui:GetRowItem.Value>
                               </ui:GetRowItem>
-                              <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Last Name " DisplayName="Get Row Item For Last Name" sap:VirtualizedContainerService.HintSize="726.4,64.8" sap2010:WorkflowViewState.IdRef="GetRowItem_2" Row="[row]">
+                              <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Last Name " DisplayName="Get Row Item For Last Name" sap:VirtualizedContainerService.HintSize="724.8,64.8" sap2010:WorkflowViewState.IdRef="GetRowItem_2" Row="[row]">
                                 <ui:GetRowItem.Value>
                                   <OutArgument x:TypeArguments="x:String">[varLastName]</OutArgument>
                                 </ui:GetRowItem.Value>
                               </ui:GetRowItem>
-                              <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Company Name" DisplayName="Get Row Item For Company Name" sap:VirtualizedContainerService.HintSize="726.4,64.8" sap2010:WorkflowViewState.IdRef="GetRowItem_3" Row="[row]">
+                              <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Company Name" DisplayName="Get Row Item For Company Name" sap:VirtualizedContainerService.HintSize="724.8,64.8" sap2010:WorkflowViewState.IdRef="GetRowItem_3" Row="[row]">
                                 <ui:GetRowItem.Value>
                                   <OutArgument x:TypeArguments="x:String">[varCompanyName]</OutArgument>
                                 </ui:GetRowItem.Value>
                               </ui:GetRowItem>
-                              <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Role in Company" DisplayName="Get Row Item For Role in Company" sap:VirtualizedContainerService.HintSize="726.4,64.8" sap2010:WorkflowViewState.IdRef="GetRowItem_4" Row="[row]">
+                              <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Role in Company" DisplayName="Get Row Item For Role in Company" sap:VirtualizedContainerService.HintSize="724.8,64.8" sap2010:WorkflowViewState.IdRef="GetRowItem_4" Row="[row]">
                                 <ui:GetRowItem.Value>
                                   <OutArgument x:TypeArguments="x:String">[varRoleInCompany]</OutArgument>
                                 </ui:GetRowItem.Value>
                               </ui:GetRowItem>
-                              <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Address" DisplayName="Get Row Item For Address" sap:VirtualizedContainerService.HintSize="726.4,64.8" sap2010:WorkflowViewState.IdRef="GetRowItem_5" Row="[row]">
+                              <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Address" DisplayName="Get Row Item For Address" sap:VirtualizedContainerService.HintSize="724.8,64.8" sap2010:WorkflowViewState.IdRef="GetRowItem_5" Row="[row]">
                                 <ui:GetRowItem.Value>
                                   <OutArgument x:TypeArguments="x:String">[varAddress]</OutArgument>
                                 </ui:GetRowItem.Value>
                               </ui:GetRowItem>
-                              <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Email" DisplayName="Get Row Item For Email" sap:VirtualizedContainerService.HintSize="726.4,64.8" sap2010:WorkflowViewState.IdRef="GetRowItem_6" Row="[row]">
+                              <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Email" DisplayName="Get Row Item For Email" sap:VirtualizedContainerService.HintSize="724.8,64.8" sap2010:WorkflowViewState.IdRef="GetRowItem_6" Row="[row]">
                                 <ui:GetRowItem.Value>
                                   <OutArgument x:TypeArguments="x:String">[varEmail]</OutArgument>
                                 </ui:GetRowItem.Value>
                               </ui:GetRowItem>
-                              <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Phone Number" DisplayName="Get Row Item For Phone Number" sap:VirtualizedContainerService.HintSize="726.4,64.8" sap2010:WorkflowViewState.IdRef="GetRowItem_7" Row="[row]">
+                              <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Phone Number" DisplayName="Get Row Item For Phone Number" sap:VirtualizedContainerService.HintSize="724.8,64.8" sap2010:WorkflowViewState.IdRef="GetRowItem_7" Row="[row]">
                                 <ui:GetRowItem.Value>
                                   <OutArgument x:TypeArguments="ui:GenericValue">[varPhoneNumber]</OutArgument>
                                 </ui:GetRowItem.Value>
                               </ui:GetRowItem>
-                              <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="726.4,228" sap2010:WorkflowViewState.IdRef="AnchorBase_1">
+                              <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="724.8,228" sap2010:WorkflowViewState.IdRef="AnchorBase_1">
                                 <ui:AnchorBase.Action>
                                   <ActivityAction x:TypeArguments="ui:Anchor">
                                     <ActivityAction.Argument>
@@ -254,8 +258,8 @@
                                   </ui:WaitUiElementAppear>
                                 </ui:AnchorBase.AnchorProvider>
                               </ui:AnchorBase>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="726.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Entering first name i.e, &quot; + varFirstName]" />
-                              <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="726.4,228" sap2010:WorkflowViewState.IdRef="AnchorBase_2">
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="724.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Entering first name i.e, &quot; + varFirstName]" />
+                              <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="724.8,228" sap2010:WorkflowViewState.IdRef="AnchorBase_2">
                                 <ui:AnchorBase.Action>
                                   <ActivityAction x:TypeArguments="ui:Anchor">
                                     <ActivityAction.Argument>
@@ -290,8 +294,7 @@
                                   </ui:WaitUiElementAppear>
                                 </ui:AnchorBase.AnchorProvider>
                               </ui:AnchorBase>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="726.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Entering last name i.e, &quot; + varLastName]" />
-                              <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="726.4,228" sap2010:WorkflowViewState.IdRef="AnchorBase_3">
+                              <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="724.8,228" sap2010:WorkflowViewState.IdRef="AnchorBase_3">
                                 <ui:AnchorBase.Action>
                                   <ActivityAction x:TypeArguments="ui:Anchor">
                                     <ActivityAction.Argument>
@@ -326,8 +329,7 @@
                                   </ui:WaitUiElementAppear>
                                 </ui:AnchorBase.AnchorProvider>
                               </ui:AnchorBase>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="726.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Entering company name i.e, &quot; + varCompanyName]" />
-                              <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="726.4,228" sap2010:WorkflowViewState.IdRef="AnchorBase_4">
+                              <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="724.8,228" sap2010:WorkflowViewState.IdRef="AnchorBase_4">
                                 <ui:AnchorBase.Action>
                                   <ActivityAction x:TypeArguments="ui:Anchor">
                                     <ActivityAction.Argument>
@@ -362,8 +364,7 @@
                                   </ui:WaitUiElementAppear>
                                 </ui:AnchorBase.AnchorProvider>
                               </ui:AnchorBase>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="726.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Entering  role in company i.e, &quot; + varRoleInCompany]" />
-                              <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="726.4,228" sap2010:WorkflowViewState.IdRef="AnchorBase_5">
+                              <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="724.8,228" sap2010:WorkflowViewState.IdRef="AnchorBase_5">
                                 <ui:AnchorBase.Action>
                                   <ActivityAction x:TypeArguments="ui:Anchor">
                                     <ActivityAction.Argument>
@@ -398,8 +399,7 @@
                                   </ui:WaitUiElementAppear>
                                 </ui:AnchorBase.AnchorProvider>
                               </ui:AnchorBase>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="726.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Entering address i.e, &quot; + varAddress]" />
-                              <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="726.4,228" sap2010:WorkflowViewState.IdRef="AnchorBase_6">
+                              <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="724.8,228" sap2010:WorkflowViewState.IdRef="AnchorBase_6">
                                 <ui:AnchorBase.Action>
                                   <ActivityAction x:TypeArguments="ui:Anchor">
                                     <ActivityAction.Argument>
@@ -420,7 +420,7 @@
                                   </ActivityAction>
                                 </ui:AnchorBase.Action>
                                 <ui:AnchorBase.AnchorProvider>
-                                  <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element Email" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_6">
+                                  <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element Email" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_6">
                                     <ui:WaitUiElementAppear.Target>
                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7a41bdc9-6b39-422b-9e56-b9a2f79e829d" InformativeScreenshot="8319fb9a47c0620ed9705f3458c17e3c" Selector="&lt;webctrl aaname='Email' tag='LABEL' /&gt;">
                                         <ui:Target.TimeoutMS>
@@ -434,14 +434,13 @@
                                   </ui:WaitUiElementAppear>
                                 </ui:AnchorBase.AnchorProvider>
                               </ui:AnchorBase>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="726,91" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Entering email i.e, &quot; + varEmail]" />
-                              <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="726,226" sap2010:WorkflowViewState.IdRef="AnchorBase_7">
+                              <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="724.8,228" sap2010:WorkflowViewState.IdRef="AnchorBase_7">
                                 <ui:AnchorBase.Action>
                                   <ActivityAction x:TypeArguments="ui:Anchor">
                                     <ActivityAction.Argument>
                                       <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
                                     </ActivityAction.Argument>
-                                    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="1" DelayMS="1" DisplayName="Type Into Phone Number" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_7" SimulateType="True" Text="[varPhoneNumber]">
+                                    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="1" DelayMS="1" DisplayName="Type Into Phone Number" EmptyField="True" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_7" SimulateType="True" Text="[varPhoneNumber]">
                                       <ui:TypeInto.Target>
                                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="da87b7e4-5c8f-4ead-ae9e-256717e7796d" InformativeScreenshot="6089722f1ae5f4054a32aee3f751efb1" Selector="&lt;webctrl tag='INPUT' /&gt;">
                                           <ui:Target.TimeoutMS>
@@ -456,7 +455,7 @@
                                   </ActivityAction>
                                 </ui:AnchorBase.Action>
                                 <ui:AnchorBase.AnchorProvider>
-                                  <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element Phone Number" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_7">
+                                  <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element Phone Number" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_7">
                                     <ui:WaitUiElementAppear.Target>
                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7a41bdc9-6b39-422b-9e56-b9a2f79e829d" InformativeScreenshot="c542d3daa3411c02b299ee40bbf5e126" Selector="&lt;webctrl aaname='Phone Number' tag='LABEL' /&gt;">
                                         <ui:Target.TimeoutMS>
@@ -476,8 +475,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:AnchorBase>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="726,91" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;Entering phone number i.e, &quot; + varPhoneNumber]" />
-                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="726,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="724.8,107.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
                                 <ui:Click.CursorPosition>
                                   <ui:CursorPosition Position="Center">
                                     <ui:CursorPosition.OffsetX>
@@ -504,7 +502,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:Click>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="726,91" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Clicking on submit button&quot;]">
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="724.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Clicking on submit button&quot;]">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -522,14 +520,14 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:ForEachRow>
-                    <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="StepStatus_1" Name="Entering Details" Status="Pass" TakeScreenshot="False">
+                    <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="857.6,134.4" sap2010:WorkflowViewState.IdRef="StepStatus_1" Name="Entering Details" Status="Pass" TakeScreenshot="False">
                       <ra:StepStatus.Description>
                         <InArgument x:TypeArguments="x:String">
                           <Literal x:TypeArguments="x:String" Value="" />
                         </InArgument>
                       </ra:StepStatus.Description>
                     </ra:StepStatus>
-                    <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="aaname" DisplayName="Get Attribute 'DIV'" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="GetAttribute_2">
+                    <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="aaname" DisplayName="Get Attribute 'DIV'" sap:VirtualizedContainerService.HintSize="857.6,135.2" sap2010:WorkflowViewState.IdRef="GetAttribute_2">
                       <ui:GetAttribute.Result>
                         <OutArgument x:TypeArguments="x:String">[actualValue]</OutArgument>
                       </ui:GetAttribute.Result>
@@ -544,8 +542,8 @@
                         </ui:Target>
                       </ui:GetAttribute.Target>
                     </ui:GetAttribute>
-                    <uta:VerifyExpression ContinueOnFailure="True" DisplayName="Verify Expression" Expression="[actualValue= lableSuccess]" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="VerifyExpression_1" TakeScreenshotInCaseOfFailingAssertion="False" />
-                    <If Condition="[actualValue= lableSuccess]" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="If_1">
+                    <uta:VerifyExpression ContinueOnFailure="True" DisplayName="Verify Expression" Expression="[actualValue= expectedValue]" sap:VirtualizedContainerService.HintSize="857.6,62.4" sap2010:WorkflowViewState.IdRef="VerifyExpression_1" TakeScreenshotInCaseOfFailingAssertion="False" />
+                    <If Condition="[actualValue= expectedValue]" sap:VirtualizedContainerService.HintSize="857.6,509.6" sap2010:WorkflowViewState.IdRef="If_1">
                       <If.Then>
                         <Sequence sap:VirtualizedContainerService.HintSize="375.2,360" sap2010:WorkflowViewState.IdRef="Sequence_15">
                           <sap:WorkflowViewStateService.ViewState>
@@ -594,10 +592,10 @@
           </Sequence>
         </TryCatch.Try>
         <TryCatch.Catches>
-          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="979.2,2256" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="977.6,2256" sap2010:WorkflowViewState.IdRef="Catch`1_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
@@ -617,7 +615,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="375.2,134.4" sap2010:WorkflowViewState.IdRef="StepStatus_3" Name="Failed to exceute test" Status="Fail" TakeScreenshot="False">
+                  <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="525.6,134.4" sap2010:WorkflowViewState.IdRef="StepStatus_3" Name="Failed to exceute test" Status="Fail" TakeScreenshot="False">
                     <ra:StepStatus.Description>
                       <InArgument x:TypeArguments="x:String">
                         <Literal x:TypeArguments="x:String" Value="" />
@@ -717,24 +715,13 @@
                   </Sequence>
                   <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="525.6,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Utilities/JiraUtil.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="Description">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;1. Navigate to url 'http://www.rpachallenge.com/' &quot; + Environment.NewLine + &quot;2. Enter values in form&quot; + Environment.NewLine +&#xA;&quot;3. Click on submit button&quot; + Environment.NewLine + &quot;4. Verify message is displayed correctly&quot; + Environment.NewLine + Environment.NewLine +&quot;Expected message : 'Try Again' &quot; + Environment.NewLine + &quot;Actual Message: 'Congratualtions!' &quot;" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="Project_Key">
-                        <Literal x:TypeArguments="x:String">UIP</Literal>
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="Summary">
-                        <Literal x:TypeArguments="x:String">User is getting a wrong error message and the form is getting saved</Literal>
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="Issue_Type">
-                        <Literal x:TypeArguments="x:String">Bug</Literal>
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="Attachment_FIle">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="io_FilePath" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="env">
-                        <Literal x:TypeArguments="x:String">Windows</Literal>
-                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="Description" xml:space="preserve">["1. Navigate to url 'http://www.rpachallenge.com/' " + Environment.NewLine + "2. Enter values in form" + Environment.NewLine +
+"3. Click on submit button" + Environment.NewLine + "4. Verify message is displayed correctly" + Environment.NewLine + Environment.NewLine +"Expected message : 'Try Again' " + Environment.NewLine + "Actual Message: 'Congratualtions!' "]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="Project_Key">UIP</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="Summary">User is getting a wrong error message and the form is getting saved</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="Issue_Type">Bug</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="Attachment_FIle">[io_FilePath]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="env">Windows</InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                 </Sequence>
@@ -752,8 +739,8 @@
         </TryCatch.Finally>
       </TryCatch>
     </Sequence>
-    <t:EndTest DisplayName="End test" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="EndTest_2" Status="PASSED" />
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Utilities/SendEmailUtil.xaml">
+    <t:EndTest DisplayName="End test" sap:VirtualizedContainerService.HintSize="1054.4,22.4" sap2010:WorkflowViewState.IdRef="EndTest_2" Status="PASSED" />
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="1054.4,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Utilities/SendEmailUtil.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="Subject">Web Test Report</InArgument>
       </ui:InvokeWorkflowFile.Arguments>

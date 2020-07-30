@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="api" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="848.8,728" sap2010:WorkflowViewState.IdRef="api_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:t="clr-namespace:TestReportGenerator;assembly=TestReportGenerator" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="api" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="911.2,688" sap2010:WorkflowViewState.IdRef="api_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:t="clr-namespace:TestReportGenerator;assembly=TestReportGenerator" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="25">
       <x:String>System.Activities</x:String>
@@ -56,7 +56,6 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>UiPath.MobileAutomation</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -85,7 +84,7 @@
         <InArgument x:TypeArguments="x:String" x:Key="Test_Name">API Test - Fail</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="872.8,1774.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="872.8,1804.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -93,7 +92,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="836,973.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence sap:VirtualizedContainerService.HintSize="836,1004" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Default="Ok" Name="OkBtn" />
           </Sequence.Variables>
@@ -127,9 +126,9 @@
             </ra:StepStatus.Description>
           </ra:StepStatus>
           <uta:VerifyExpression ContinueOnFailure="True" DisplayName="Verify Expression" Expression="[sCode.ToString = &quot;201&quot;]" sap:VirtualizedContainerService.HintSize="794.4,62.4" sap2010:WorkflowViewState.IdRef="VerifyExpression_1" TakeScreenshotInCaseOfFailingAssertion="False" />
-          <If Condition="[sCode.ToString = &quot;201&quot;]" sap:VirtualizedContainerService.HintSize="794.4,541.6" sap2010:WorkflowViewState.IdRef="If_1">
+          <If Condition="[sCode.ToString = &quot;201&quot;]" sap:VirtualizedContainerService.HintSize="794.4,572" sap2010:WorkflowViewState.IdRef="If_1">
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="375.2,329.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence sap:VirtualizedContainerService.HintSize="375.2,360" sap2010:WorkflowViewState.IdRef="Sequence_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -142,11 +141,11 @@
                     </InArgument>
                   </ra:StepStatus.Description>
                 </ra:StepStatus>
-                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;status code=&quot;+ sCode.ToString +vbCr+&quot;Response= &quot;+res]" />
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;status code=&quot;+ sCode.ToString +vbCr +&quot;Response &quot; + res]" />
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence sap:VirtualizedContainerService.HintSize="375.2,392" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <Sequence sap:VirtualizedContainerService.HintSize="375.2,422.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -159,7 +158,7 @@
                     </InArgument>
                   </ra:StepStatus.Description>
                 </ra:StepStatus>
-                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[&quot;status code=&quot;+ sCode.ToString +vbCr+&quot;Response= &quot;+res]" />
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;status code=&quot;+ sCode.ToString +vbCr +&quot;Response &quot; + res]" />
                 <Throw Exception="[new Exception(&quot;Status code incorrect&quot;)]" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="Throw_1" />
               </Sequence>
             </If.Else>
@@ -170,7 +169,7 @@
         <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="839.2,488" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -187,24 +186,13 @@
               <ui:WriteTextFile DisplayName="Write Text File" FileName="APIResponse.txt" sap:VirtualizedContainerService.HintSize="333.6,134.4" sap2010:WorkflowViewState.IdRef="WriteTextFile_3" Text="[&quot;status code=&quot;+ sCode.ToString +vbCr+&quot; Response= &quot;+res]" />
               <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Utilities/JiraUtil.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
-                  <InArgument x:TypeArguments="x:String" x:Key="Description">
-                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;1. Sending request using Post API with endpoint 'https://jsonplaceholder.typicode.com/posts'&quot; + Environment.NewLine + &quot;2. Check response status code.&quot; + Environment.NewLine +&#xA;&quot;3. Response status code should be 201&quot;+ Environment.NewLine + Environment.NewLine + &quot;Expected status code : 201&quot;+ Environment.NewLine +&quot; Actual status code: 404&quot;" />
-                  </InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="Project_Key">
-                    <Literal x:TypeArguments="x:String">UIP</Literal>
-                  </InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="Summary">
-                    <Literal x:TypeArguments="x:String">Response code doesn't match</Literal>
-                  </InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="Issue_Type">
-                    <Literal x:TypeArguments="x:String">Bug</Literal>
-                  </InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="Attachment_FIle">
-                    <Literal x:TypeArguments="x:String">APIResponse.txt</Literal>
-                  </InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="env">
-                    <Literal x:TypeArguments="x:String">Windows</Literal>
-                  </InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="Description" xml:space="preserve">["1. Sending request using Post API with endpoint 'https://jsonplaceholder.typicode.com/posts'" + Environment.NewLine + "2. Check response status code." + Environment.NewLine +
+"3. Response status code should be 201"+ Environment.NewLine + Environment.NewLine + "Expected status code : 201"+ Environment.NewLine +" Actual status code: 404"]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="Project_Key">UIP</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="Summary">Response code doesn't match</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="Issue_Type">Bug</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="Attachment_FIle">APIResponse.txt</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="env">Windows</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
               <t:EndTest DisplayName="End test" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="EndTest_1" Status="FAILED" />
