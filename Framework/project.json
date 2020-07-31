@@ -82,6 +82,11 @@
         "editingStatus": "Publishable",
         "testCaseId": "51818a36-7d37-4174-9cf5-f15a9b7a750e",
         "fileName": "TestCase\\ebayTest(Cloud) - Pass.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "1f2d4256-d526-4ab8-90d0-8d2148f01897",
+        "fileName": "TestCase\\RPA_ChallengeTest(Cloud) - Pass.xaml"
       }
     ]
   },
