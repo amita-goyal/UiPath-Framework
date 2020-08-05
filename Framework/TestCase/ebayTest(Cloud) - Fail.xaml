@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ebay_Test" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="664,867" sap2010:WorkflowViewState.IdRef="Recorded_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data" xmlns:t="clr-namespace:TestReportGenerator;assembly=TestReportGenerator" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uma="clr-namespace:UiPath.MobileAutomation.Activities;assembly=UiPath.MobileAutomation.Activities" xmlns:umm="clr-namespace:UiPath.MobileAutomation.Models;assembly=UiPath.MobileAutomation" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ebay_Test" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="982,787" sap2010:WorkflowViewState.IdRef="Recorded_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data" xmlns:t="clr-namespace:TestReportGenerator;assembly=TestReportGenerator" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uma="clr-namespace:UiPath.MobileAutomation.Activities;assembly=UiPath.MobileAutomation.Activities" xmlns:umm="clr-namespace:UiPath.MobileAutomation.Models;assembly=UiPath.MobileAutomation" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="25">
       <x:String>System.Activities</x:String>
@@ -70,6 +70,7 @@
       <Variable x:TypeArguments="x:String" Name="actualText" />
       <Variable x:TypeArguments="x:String" Default="'Please login first" Name="expectedText" />
       <Variable x:TypeArguments="sd1:DataTable" Name="DataTable" />
+      <Variable x:TypeArguments="sd:Image" Name="Screenshot" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -98,7 +99,7 @@
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="UiPathScopeContext" />
           </ActivityAction.Argument>
-          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,1465" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,1385" sap2010:WorkflowViewState.IdRef="TryCatch_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -311,7 +312,6 @@
                   <Sequence sap:VirtualizedContainerService.HintSize="376,733" sap2010:WorkflowViewState.IdRef="Sequence_12">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="folder" />
-                      <Variable x:TypeArguments="sd:Image" Name="Screenshot" />
                     </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -346,24 +346,14 @@
                     </ui:InvokeWorkflowFile>
                     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Utilities/JiraUtil.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="x:String" x:Key="Description">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;1. Launch ebay application.&quot; + Environment.NewLine + &quot;2. Perform mobile actions.&quot; + Environment.NewLine + &quot;3. Click on 'Add to Cart' button&quot; + Environment.NewLine + &#xA;&quot;4. Verify message is displayed correctly&quot; + Environment.NewLine + Environment.NewLine +&#xA;&quot;Expected message : 'Please login first.&quot; +Environment.NewLine + &quot;Actual Message: 'You can use your email or username, or continue with your social account.' &quot;" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="Project_Key">
-                          <Literal x:TypeArguments="x:String">UIP</Literal>
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="Summary">
-                          <Literal x:TypeArguments="x:String">User is getting a wrong message during checkout</Literal>
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="Issue_Type">
-                          <Literal x:TypeArguments="x:String">Bug</Literal>
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="Attachment_FIle">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="folder" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="env">
-                          <Literal x:TypeArguments="x:String">Android</Literal>
-                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Description" xml:space="preserve">["1. Launch ebay application." + Environment.NewLine + "2. Perform mobile actions." + Environment.NewLine + "3. Click on 'Add to Cart' button" + Environment.NewLine + 
+"4. Verify message is displayed correctly" + Environment.NewLine + Environment.NewLine +
+"Expected message : 'Please login first." +Environment.NewLine + "Actual Message: 'You can use your email or username, or continue with your social account.' "]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Project_Key">UIP</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Summary">User is getting a wrong message during checkout</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Issue_Type">Bug</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Attachment_FIle">[folder]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="env">Android</InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                     <t:EndTest DisplayName="End test" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="EndTest_3" Status="FAILED" />
